@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html> 
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ML Project</title>
+    <style>
+        body {
+            font-family: 'Arimo', sans-serif;
+            background-color: blanchedalmond;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.4s ease;
+        }
+        
+        body:hover {
+            background-color: cornflowerblue;
+        }
+        
+        .login {
+            width: 400px;
+            height: auto;
+            margin: 80px auto;
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            color: black;
+            font-display: black;
+            border-radius: 8px;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+        }
+        
+        .login:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .login:active {
+            color: navy; /* Change the text color on click */
+        }
+        
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #c21616;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(45deg, #ff7300, #feae96);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s ease, text-shadow 0.3s ease, background-position 0.3s ease;
+        }
+        
+        h1:hover {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            background-position: right;
+            transform: scale(1.1);
+        }
+        
+        h4 {
+            font-family: 'Pacifico', cursive;
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s ease, font-size 0.3s ease, transform 0.2s ease;
+        }
+        
+        h4:hover {
+            color: #ff6600;
+            font-size: 1.8em;
+            transform: translateY(-2px);
+        }
+        
+        h4:active {
+            transform: scale(0.95);
+        }
+        
+
+        input[type="text"] {
+            width: calc(100% - 24px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: burlywood;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        input[type="text"]:hover,
+        input[type="text"]:focus {
+            border-color: chocolate;
+            box-shadow: 0 0 5px rgba(165, 42, 42, 0.5);
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+        }
+        
+    
+    
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #7dc6ee;
+            box-shadow: 0 0 5px rgba(125, 198, 238, 0.5);
+        }
+
+        button {
+            width: calc(100% - 24px);
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        button:active {
+            transform: scale(0.95);
+        }
+        
+        
+        button:hover {
+            background: #45a049;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 28px;
+            text-align: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        h2:hover {
+            color: #ff6600;
+            transform: scale(1.1);
+        }
+        
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="model.css">
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+    <h2>Welcome to the Weather Prediction</h2>
+    
+    <div class="login">
+        <h1>Weather Prediction</h1>
+
+      <!-- Main Input For Receiving Query to our ML -->
+
+     <form action="{{url_for('predict_datapoint')}}" method="post">
+        <input type="text" name="precipitation" placeholder="precipitation" required="required"/><br>
+        <input type="text" name="temp_max" placeholder="temp_max" required="required" /><br>
+        <input type="text" name="temp_min" placeholder="temp_min" required="required" /><br>
+        <input type="text" name="wind" placeholder="wind" required="required" /><br>
+        <input type="text" name="year" placeholder="year" required="required" /><br>
+        <input type="text" name="month" placeholder="month" required="required" /><br>
+        <input type="text" name="day" placeholder="day" required="required"/><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <h4>Created by Neeraj Sharma</h4>
+     </form>
+    </div> 
+<body>
+
+
+</div>
+{{result}}
+</body>     
+
+</body>
+</html>
