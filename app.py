@@ -63,13 +63,13 @@ def predict_datapoint():
         if (predict==0):
             result = 'drizzle'
         elif (predict == 1):
-            result='rain'
+            result='rainy'
         elif (predict == 2):
-            result='sun' 
+            result='sunny' 
         elif (predict == 3):
             result='snow'
         else:
-            result='fog'
+            result='fogg'
 
 
         return render_template('result.html', result=result)

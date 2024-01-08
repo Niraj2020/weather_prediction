@@ -142,14 +142,32 @@
             transform: scale(1.1);
         }
         
+        .footer {
+            background-color: rgba(3, 36, 67, 0.504);
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .footer a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer:hover {
+            background-color: rgba(3, 36, 67, 0.8);
+        }
+        
+        .footer a:hover {
+            color: #ff6600; /* Change link color on hover */
+        }
+        
 
 
-
-<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+/*<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="model.css">
+<link rel="stylesheet" href="model.css">*/
 
 </style>
 </head>
@@ -177,15 +195,19 @@
         <input type="text" name="day" placeholder="day" required="required"/><br>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-        <h4>Created by Neeraj Sharma</h4>
+        <h2>Created by Neeraj Sharma</h2>
      </form>
     </div> 
 <body>
 
 
 </div>
-{{result}}
+<div class="text-center text-light p-3 footer">
+    © 2024 Copyright:
+    <a href="#" class="text-light">Neeraj Kumar Sharma</a>
+</div>
+
 </body>     
 
 </body>
-</html>
+</html> 
